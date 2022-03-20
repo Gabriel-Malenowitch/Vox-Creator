@@ -2,37 +2,25 @@ import { vox } from "./archive.js"
 import { regEx } from "./regex.js"
 
 
+//Componentes encontrados!!
+const reg = /(vox-box([^\[]*\[[^\]]*\])?[^;]*;)/g
+const components = vox.match(reg)
+// console.log(components)
+
+
+
 export const finder = {
     tests(){
-        // vox-box[
-        //     Just a test
-        // ]
-        //     Oiiiiiiiii
-        // ;
-
-        //Componente encontrado
-        const reg = /vox-box([\n \[]+[^\]])[^;]+;/gi
-        const components = vox.match(reg)
-        console.log(components)
-
 
         
-        
-        const regKeys = /\[[^\]]*/g
-        const betweenKeys = components[0].match(regKeys)
-
-        // const regExItem = /(\r\n|\n|\r) [^;]/g
-        console.log(betweenKeys)
-
-
-        // const regKey = /[^\-]*/g
-        // const keys = betweenKeys.match(regKey)
 
 
 
-
-        console.log(keys)
+        //console.log(keys)
     },
+
+    
+    
 
     getTitle(){
         let result = ""
