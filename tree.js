@@ -13,9 +13,12 @@ export class Tree extends Utils{
         
         elements.forEach( stringElement => {
             if(!checkIncludes(stringElement, listOfNonElements)){
-                const element = new Component(stringElement)
+                console.log(`;${stringElement};`)
+                if(stringElement !== ""){
+                    const element = new Component(stringElement)
                 
-                this.children.push(element.getElement())
+                    this.children.push(element.getElement())
+                }
             }
 
         })
